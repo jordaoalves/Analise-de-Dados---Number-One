@@ -16,8 +16,9 @@ anova(modeloRegressaoMediaAlunosFund)
 
 
 ggplot(data=tabelaDados,aes(y=MED_TURM_FUND,x=Pontuação))+
-  ggtitle("Média de alunos por turma x Pont. das escolas") +
-              geom_point()+geom_smooth(method="lm")
+  ggtitle("Média de Alunos por Turma x Pontuação da \n Infraestrutura  das Escolas Públicas \n (Nível Fundamental)  em 2017 no Brasil") +
+              geom_point()+geom_smooth(method="lm")+
+theme(plot.title = element_text(hjust = 0.5))
 
 arvoreMediaAlunosFund <- rpart(Pontuação ~ MED_TURM_FUND ,  data = tabelaDados)
 prp(arvoreMediaAlunosFund, extra = 1)
@@ -32,8 +33,9 @@ prp(arvoreMediaAlunosFund, extra = 1)
   
   
   ggplot(data=tabelaDados,aes(y=TX_APRV_FUND,x=Pontuação))+
-    ggtitle("Taxa de Aprovação x Pontuação das Escolas") +
-    geom_point()+geom_smooth(method="lm")
+    ggtitle("Taxa de Aprovação dos Alunos x Pontuação da \n Infraestrutura  das Escolas Públicas (Nível \n Fundamental)  em 2017 no Brasil") +
+    geom_point()+geom_smooth(method="lm")+
+  theme(plot.title = element_text(hjust = 0.5))
   
   arvoreTxAprovFund <- rpart(Pontuação ~ TX_APRV_FUND ,  data = tabelaDados)
   prp(arvoreTxAprovFund, extra = 1)

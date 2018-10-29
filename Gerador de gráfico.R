@@ -20,8 +20,8 @@ constroi_mapa_tematico <- function(dataset){
 }
 
 constroi_mapa_tematico(dados) +
-  ggtitle("               Roubos de carros no Brasil em 2014") +
-  scale_fill_continuous(name = "Taxa/100 mil hab.", low = 'white', high = 'red',
+  ggtitle(" Pontuação da Infraestrutura das Escolas Públicas em 2017 no Brasil") +
+  scale_fill_continuous(name = "Pontuação", low = 'white', high = 'red',
                         na.value = 'white')
 
 
